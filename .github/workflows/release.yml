@@ -45,6 +45,16 @@ jobs:
         with:
           arguments: assembleRelease
           gradle-version: 7.3.3
+
+
+      - name: List build outputs
+        run: |
+          ls -R ./app/build/outputs/apk/
+
+      - name: List release folder
+        run: |
+          ls -R ./app/build/outputs/apk/release/
+
       - name: Move to release
         run: |
           cp ./app/build/outputs/apk/release/app-release.apk ostorlab_insecure_app.apk
