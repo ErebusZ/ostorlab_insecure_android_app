@@ -53,7 +53,11 @@ jobs:
 
       - name: Sign APK
         run: |
-          java -jar /usr/local/bin/uber-apk-signer.jar --apks ./app/build/outputs/apk/release/app-release-unsigned.apk -o ./ostorlab_insecure_app.apk
+          java -jar /usr/local/bin/uber-apk-signer.jar --apks ./app/build/outputs/apk/release/app-release-unsigned.apk -o ostorlab_insecure_app
+
+      - name: Move to release
+        run: |
+          cp /home/runner/work/ostorlab_insecure_android_app/ostorlab_insecure_android_app/ostorlab_insecure_app/app-release-aligned-debugSigned.apk ostorlab_insecure_app.apk
 
       - name: Release
         uses: softprops/action-gh-release@v1
