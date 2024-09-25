@@ -70,6 +70,6 @@ jobs:
           scan_profile: full_scan
           asset_type: android-apk
           target: ./ostorlab_insecure_app.apk
-          scan_title: Scan App
+          scan_title: Ostorlab Insecure App Workflow
           ostorlab_api_key: ${{ secrets.OSTORLAB_API_KEY }}
-          extra: --test-credentials-name "phone number" --test-credentials-value 2312132 --test-credentials-name "pin" --test-credentials-value 213212
+          extra: --test-credentials-name "phone_number" --test-credentials-value 2312132 --test-credentials-name "pin" --test-credentials-value 213212
